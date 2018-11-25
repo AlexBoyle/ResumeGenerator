@@ -1,0 +1,32 @@
+@keyframes sideBarOpenLeft {
+  from{
+    width:100%;
+  }
+  to{
+    width:calc(100% - 200px);
+  }
+}
+@keyframes sideBarOpenRight {
+  from{
+    width:0px;
+  }
+  to{
+    width:200px;
+  }
+}
+@keyframes sideBarCloseLeft {
+  from{
+    width:calc(100% - 200px);
+  }
+  to{
+    width:100%;
+  }
+}
+@keyframes sideBarCloseRight {
+  from{
+    width:200px;
+  }
+  to{
+    width:0;
+  }
+}

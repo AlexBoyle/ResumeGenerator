@@ -1,0 +1,66 @@
+<div class="printPage">
+	<div style="margin:auto;width:95%;">
+		<div id="headder">
+			<div style="height:15px;"></div>
+			<div style="text-align:center;font-size:36px;">Alex Boyle</div>
+			<div style="text-align:center;">
+				<i class="fa fa-home"></i>&nbsp 2012 Crossing Lane, Naperville Il, 60540 |
+				<i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp (630)777-4803 |
+				<i class="fa fa-envelope" aria-hidden="true"></i>&nbsp aboyle75@gmail.com |
+				<i class="fa fa-github" aria-hidden="true"></i>&nbsp github.com/alexboyle
+			</div>
+		</div>
+		<div>
+			<div id="education">
+				<div>
+					<div class="line"></div>
+					<h4>Education</h4>
+					<div class="line"></div>
+				</div>
+				<div layout="row">
+					<div flex="*">
+						<b>Northern Illinois University</b>
+						<br>
+						<i>B.S. Computer Science, Emphases in Mathematics</i>
+					</div>
+					<div style="text-align:right">
+						<b>GPA: 3.09</b>
+						<br>
+						<i>May 2019</i>
+					</div>
+						
+				</div>
+			</div>
+			<div id="work-experience">
+				<div class="line"></div><h4>Experience</h4><div class="line"></div>
+				<div ng-repeat="pos in work">
+					<div layout="row">
+						<div flex="*">
+							<b>{{pos.company}}</b>
+							<br>
+							<i>{{pos.position}}</i>
+						</div>
+						<div style="text-align:right">
+							{{pos.date}}
+							<br>
+							{{pos.location}}
+						</div>
+					</div>
+					<ul ng-repeat="sec in pos.desc">
+						<li>{{sec.name}}</li>
+						<ul><li ng-repeat="point in sec.points">{{point}}</li></ul>
+					</ul>
+				</div>
+			</div>
+			<div id="projects">
+				<div class="line"></div><h4>Other</h4><div class="line"></div>
+				<div>
+					<div ng-repeat="activity in other">
+						<b>{{activity.name}}</b>
+						<ul><li ng-repeat="point in activity.desc">{{point}}</li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
