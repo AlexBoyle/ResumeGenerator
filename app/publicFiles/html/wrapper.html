@@ -1,0 +1,13 @@
+<div style="min-width:560px;overflow:hidden;height:100%;">
+	<Headder layout="row">
+		<hButton ng-click="Home()">Home</hButton>
+		<hButton ng-click="Resume()">Resume</hButton>
+		<hButton ng-click="Projects()">Projects</hButton>
+		<hButton ng-click="Running()">Running</hButton>
+		<div flex="*"/>
+		<hButton>Links</hButton>
+	</Headder>
+	<div style="overflow-y:auto;height:calc( 100% - 60px );">
+		<div ui-view=""></div>
+	</div>
+</div>

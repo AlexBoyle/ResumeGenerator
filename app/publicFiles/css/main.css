@@ -1,3 +1,22 @@
+Headder {
+	height:60px;
+	width:100%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+Headder hButton {
+	font-weight:900;
+	font-size:20;
+	padding:0px 10px 0px 10px;
+	text-align: center;
+	padding-top:15px;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+Headder hButton:hover {
+	background-color:rgba(0,0,0,.1);
+}
+    
 #wrapper{
   width:100%;
 }
@@ -111,4 +130,18 @@ img{
 }
 h3{
   margin-top: 7px !important;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }

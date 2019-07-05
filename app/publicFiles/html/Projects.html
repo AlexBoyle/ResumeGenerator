@@ -1,0 +1,21 @@
+<div style="background-color: rgb(82,86,89)">
+	<div style="min-height:10px;"/>
+	<div>
+		<div layout="row" ng-repeat="project in projects" style="border-radius:5px;padding:5px;background-color:white;max-width:600px;margin:auto;margin-bottom:10px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+			<div>
+				<div style="font-weight:900;font-size:24;">{{project.name}}</div>
+				<a href="{{project.link}}">Github Repository</a>
+				<div>Project Started: {{project.date | date : "MMM d, yyyy"}}</div>
+				<div>Stack: {{project.tech}}</div>
+				
+				<p>
+				<div style="padding-right:10px;">{{project.desc}}</div>
+			</div>
+			<div layout="column">
+				<div flex="*"/>
+				<img src="{{project.img}}" style="min-width:200px;"/>
+				<div flex="*"/>
+			</div>
+		</div>
+	</div>
+</div>
