@@ -89,6 +89,9 @@ body{
   background-color:fafafa;
   padding: 0;
 }
+.highlightHover:hover {
+	background-color: rgba(0,0,0,.5)
+}
 img{
   vertical-align: middle;
   display: inline-block;

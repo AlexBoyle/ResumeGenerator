@@ -41,4 +41,9 @@ angular.module('App').config(['$stateProvider', '$urlRouterProvider', '$location
 			templateUrl: 'html/Resume.html',
 			controller: 'printResume',
 		})
+		.state("Wrapper.CallCalculator", {
+			url: "/CallCalculator",
+			templateUrl: 'html/CallCalculator.html',
+			controller: 'callCalculator',
+		})
 	}]);

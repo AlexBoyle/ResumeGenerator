@@ -1,0 +1,54 @@
+<div style="background-color: rgb(82,86,89);height:100%;">
+	<div style="min-height:10px;"/>
+	<div>
+		<div style="border-radius:5px;padding:5px;background-color:white;max-width:600px;margin:auto;margin-bottom:10px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+			<div layout="row" style="border-radius:5px;border: 1px solid black;padding:5px;">
+				<div>
+					<div layout="row">
+						<lable>Current Price: </lable>
+						<input style="width:50px;" ng-model="currentPrice" ng-change="calculate()"/>
+					</div>
+				</div>
+				<div>
+					<div layout="row">
+						<lable style="width:70px;text-align:right;">Strike: </lable>
+						<input style="width:50px;" ng-model="strike" ng-change="calculate()"/>
+					</div>
+					<div layout="row">
+						<lable style="width:70px;text-align:right;">premium: </lable>
+						<input style="width:50px;" ng-model="premium" ng-change="calculate()"/>
+					</div>
+				</div>
+				<div>
+					<div layout="row">
+						<lable style="width:70px;text-align:right;">Frequency: </lable>
+						<input style="width:50px;" ng-model="frequency" ng-change="calculate()"/>
+					</div>
+					<div layout="row">
+						<lable style="width:70px;text-align:right;">End: </lable>
+						<input style="width:50px;" ng-model="end" ng-change="calculate()"/>
+					</div>
+				</div>
+			</div>
+			<div style="margin:5px;"/>
+			<div style="border-radius:5px;border: 1px solid black;padding:5px;">
+				<div layout="row" style="">
+					<div style="width:110px;text-align:right;">Precent Profit</div>
+					<div style="width:15px;"></div>
+					<div style="width:110px;text-align:right;">Precent Change</div>
+					<div style="width:15px;"></div>
+					<div style="width:110px;text-align:right;">Stock Price</div>
+				</div>
+				<div>
+					<div layout="row" ng-repeat="obj in changes" class="highlightHover">
+						<div style="width:110px;text-align:right;">{{obj.profit | number : sigfig}}%</div>
+						<div style="width:15px;"></div>
+						<div style="width:110px;text-align:right;">{{obj.priceChange | number : sigfig}}%</div>
+						<div style="width:15px;"></div>
+						<div style="width:110px;text-align:right;">${{obj.price | number : 2}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
