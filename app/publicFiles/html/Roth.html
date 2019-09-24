@@ -1,0 +1,83 @@
+<div style="background-color: rgb(82,86,89);height:100%;">
+	<div style="min-height:10px;"/>
+	<div>
+		<div style="border-radius:5px;padding:5px;background-color:white;max-width:600px;margin:auto;margin-bottom:10px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+			<div layout="row" style="border-radius:5px;border: 1px solid black;padding:5px;">
+				<div>
+					<div layout="row">
+						<lable style="width:110px;text-align:right;">Inital Investment: </lable>
+						<input type="number" style="width:50px;" ng-model="InitalValue" ng-change="calculate()"/>
+					</div>
+					<div layout="row">
+						<lable style="width:110px;text-align:right;">contributions: </lable>
+						<input type="number" style="width:50px;" ng-model="yearlyControbutions" ng-change="calculate()"/>
+					</div>
+				</div>
+				<div>
+					<div layout="row">
+						<lable style="width:70px;text-align:right;">Interest: </lable>
+						<input type="number" style="width:50px;" ng-model="yearlyIntrest" ng-change="calculate()"/>
+					</div>
+					<div layout="row">
+						<lable style="width:70px;text-align:right;">Years: </lable>
+						<input type="number" style="width:50px;" ng-model="years" ng-change="calculate()"/>
+					</div>
+				</div>
+				<div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">Current Tax: </lable>
+						<input type="number" style="width:50px;" ng-model="avrTaxCurr" ng-change="calculate()"/>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">Future Tax: </lable>
+						<input type="number" style="width:50px;" ng-model="avrTaxLater" ng-change="calculate()"/>
+					</div>
+				</div>
+				
+			</div>
+			<div style="margin:5px;"/>
+			<div style="border-radius:5px;border: 1px solid black;padding:5px;" layout="row">
+				<div style="width:50%;">
+					<div>401K</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">contributions: </lable>
+						<div style="width:110px;text-align:right;">${{k.contributions | number : 2}}</div>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">Interest: </lable>
+						<div style="width:110px;text-align:right;">${{k.interest | number : 2}}</div>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">After {{years}} years: </lable>
+						<div style="width:110px;text-align:right;">${{k.fourty | number : 2}}</div>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">Total After removing: </lable>
+						<div style="width:110px;text-align:right;">${{k.profit | number : 2}}</div>
+					</div>
+					
+				</div>
+				<div style="width:50%;">
+					<div>Roth</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">contributions: </lable>
+						<div style="width:110px;text-align:right;">${{roth.contributions | number : 2}}</div>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">Interest: </lable>
+						<div style="width:110px;text-align:right;">${{roth.interest | number : 2}}</div>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">After {{years}} years: </lable>
+						<div style="width:110px;text-align:right;">${{roth.fourty | number : 2}}</div>
+					</div>
+					<div layout="row">
+						<lable style="width:150px;text-align:right;">Total After removing: </lable>
+						<div style="width:110px;text-align:right;">${{roth.profit | number : 2}}</div>
+					</div>
+				</div>
+			</div>
+			<div id="chart_div"></div>
+		</div>
+	</div>
+</div>
