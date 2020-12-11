@@ -51,4 +51,18 @@ angular.module('App').config(['$stateProvider', '$urlRouterProvider', '$location
 			templateUrl: 'html/Roth.html',
 			controller: 'roth',
 		})
+		.state("birth", {
+			url: "/HappyBirthday-:name",
+			templateUrl: 'html/HappyBirthday.html',
+			controller: function($stateParams, $scope) {
+				
+            $scope.name = $stateParams.name 
+        }})
+		.state("birth1", {
+			url: "/HappyBirthday:name",
+			templateUrl: 'html/HappyBirthday.html',
+			controller: function($stateParams, $scope) {
+				
+            $scope.name = $stateParams.name 
+        }})
 	}]);

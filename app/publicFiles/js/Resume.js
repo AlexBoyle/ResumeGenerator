@@ -16,25 +16,39 @@ angular.module('App').controller('printResume',['$scope', function($scope){
 		$scope.desc = '';
 		$scope.work = [
 			{
-					'position': 'Teaching Assistant',
-					'company': 'Northern Illinois University',
-					'img': 'niu.png',
-					'location': 'DeKalb, IL',
-					'date': "Jan 2019 - May 2019",
-					'time': timePeriodToString(new Date('2016-04-01'), new Date('2018-05-01')),
-					'desc': [
-						{
-							name: 'Technologies Used: Unix, C++, Blackboard'
-						},
-						{
-							name: 'Responsibilities:',
-							points: [
-								'Hold Office hours to assist students with class material',
-								'Grade all course assignments'
-							]
-						}
-					]
-				},
+				'position': 'Software Engineer I',
+				'company': 'CME Group',
+				'img': '',
+				'location': 'Chicago, IL',
+				'date': "Jun 2019 - Present",
+				'time': timePeriodToString(new Date('2019-06-01'), new Date()),
+				'desc': [
+					{
+						name: 'Technologies Used: Java/Spring, Node, JavaScript, Chef, Jenkins, Bash'
+					},
+				
+				]
+			},
+			{
+				'position': 'Teaching Assistant',
+				'company': 'Northern Illinois University',
+				'img': 'niu.png',
+				'location': 'DeKalb, IL',
+				'date': "Jan 2019 - May 2019",
+				'time': timePeriodToString(new Date('2016-04-01'), new Date('2018-05-01')),
+				'desc': [
+					{
+						name: 'Technologies Used: Unix, C++, Blackboard'
+					},
+					{
+						name: 'Responsibilities:',
+						points: [
+							'Hold Office hours to assist students with class material',
+							'Grade all course assignments'
+						]
+					}
+				]
+			},
 			{
 				'position': 'Campus Innovator',
 				'company': 'Discover Financial Services',
